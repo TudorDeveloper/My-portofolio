@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <header>
+        <div class="overlay"></div>
+        <nav>
+            <h2>SHOP</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="cart">
+                    <a href="cart.html">
+                        <ion-icon name="basket"></ion-icon>Cart<span>0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="products-container">
+        <div class="product-header">
+            <h5 class="product-title">PRODUCT</h5>
+            <h5 class="price">PRICE</h5>
+            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="total">TOTAL</h5>
+         </div>
+    <div class="products">
+
+    </div>
+</div>
+<footer>
+    Powered by Tudor Software &copy; 2021
+</footer>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"/> </script>
+    <script src="main.js"></script>
+<script>
+
+    function adauga(prod_tag){
+        // folosim functiile de cartNumbers / totalCost cu produsul pentru care modificam cantitatea
+        for (let i = 0; i < products.length; i++){
+            if (products[i].tag == prod_tag){
+                cartNumbers(products[i]) 
+                totalCost(products[i]) 
+            }
+        }
+        // reafisam datele din cart actualizate
+        displayCart();
+    }
+       
+    function scade(prod_tag){
+        // preluam produsele din cart din local storage si daca mai este doar un produs dezactivam butonul de scazut numar produse
+        let cartItems = localStorage.getItem('productsInCart');
+        cartItems = JSON.parse(cartItems);
+        if (cartItems[prod_tag].inCart <= 1){
+            return false;
+        }
+
+        // folosim functiile de cartNumbers / totalCost cu produsul pentru care modificam cantitatea
+        for (let i = 0; i < products.length; i++){
+            if (products[i].tag == prod_tag){
+                cartNumbers(products[i],'minus') 
+                totalCost(products[i],'minus') 
+            }
+        }
+        // reafisam datele din cart actualizate
+        displayCart();
+    }
+
+    function elimina(prod_tag){
+        // ne asiguram ca vrea sa il stearga
+        let rusure = confirm('Esti sigur ca vrei sa il stergi din cart?');
+        //daca da ne apucam de treaba
+        if (rusure){
+            // preluam produsele din cart din local storage pentru a elimina complet produsul dorit
+            let cartItems = localStorage.getItem('productsInCart');
+            cartItems = JSON.parse(cartItems);
+            console.log(cartItems);
+
+            // aflam cate produse trebuie sa stergem si costul lor inainte sa stergem efectiv
+            let cateItemsDeSters = cartItems[prod_tag].inCart;
+            let pretItemsDeSters = cateItemsDeSters * cartItems[prod_tag].price;
+
+            // eliminam  complet produsul din productsInCart si actualizam informatia in local storage
+            delete cartItems[prod_tag];
+            localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+            // actualizam manual numarul de produse 
+            let productNumbers = localStorage.getItem('cartNumbers');
+            localStorage.setItem('cartNumbers', productNumbers - cateItemsDeSters);
+
+            // actualizam manual costul total al cartului
+            let cartCost = localStorage.getItem('totalCost');
+            localStorage.setItem('totalCost', cartCost - pretItemsDeSters);
+         
+            // reafisam datele din cart actualizate
+            displayCart();
+            
+        }
+    }
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,196 @@
+body {
+		background:  url('imagini/index/vagabond-background.jpg') no-repeat center center;
+		background-size: cover;
+	
+}
+
+#header {
+	width: 1200px;
+	height: 100px;
+	margin: auto;
+	padding: 20px;
+	
+}
+
+#logo {
+	height: 130px;
+	margin: 15px 0px;
+	
+}
+
+h1 {
+	margin-bottom: 0px;
+
+}
+
+
+#menu {
+	list-style-type: none;
+	float: right;
+	
+}
+
+.menu-btn {
+	float: left;	
+	margin: 15px 15px;
+	
+}
+
+.menu-link {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 20px;
+	
+} 
+
+.menu-link:hover { 
+		background: #333;
+		color: #ccc;
+		text-decoration: underline;
+	
+}
+
+.main-link a
+{
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	padding: 10px 20px;
+	
+} 
+
+.main-link a:hover {
+color: grey;
+}
+
+#main {
+		width: 1600px;
+		margin: auto;
+		padding: 20px;
+		text-align: center;
+		background: rgba(0,0,0,0.7);
+}
+
+#main1 {
+		width: 1600px;
+		color: white;
+}
+
+#main2 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main3 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main4 {
+		width: 1600px;
+		height: 483px;
+}
+
+
+#main5 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main6 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main7 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main8 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main9 {
+		width: 1600px;
+		height: 483px;
+}
+
+#main3b {
+		width: 1600px;
+		height: 966px;
+}
+
+.cate2  {
+		width: 800px;	
+		margin: auto;
+		
+}
+
+.cate3  {
+		width: 1200px;	
+		margin: auto;
+		
+}
+
+
+
+.article {
+	
+	width: 320px;
+	float: left;
+	background: white;
+	margin: 20px 40px;
+}
+
+.article1 {
+	
+	width: 320px;
+	height: 427px;
+	background: white;
+	margin: auto;
+	color: black;
+}
+
+.article-img {
+	
+	width: 320px;
+	
+	
+}	
+
+.article-center {
+	
+	margin: auto;
+	
+	
+}	
+
+#stores {
+	color: white;
+	
+}
+
+#stores .article {
+	color: black;
+	
+}
+
+#stores .cate3 .article {
+	height: 407px;
+	padding-bottom: 20px;
+}
+
+#footer {
+	
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+	
+}
+
+
