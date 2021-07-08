@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="owl.carousel.min.css" />
+    <title>Iphone 12 Presentation</title>
+</head>
+
+<body>
+<div id="header">
+    <a href="index.html" id="logo"><img src="imagini/index/apple-logo.png" title="Iphone 12 Review" /> </a>
+        <label for="abc">
+            <img src="imagini/index/menu-icon.png">
+        </label>
+            <input type="checkbox" id="abc">
+                <ul>
+				    <li><a href="iphone-12-pro-max.html">Iphone 12 Pro Max</a></li>
+				    <li><a href="iphone-12-pro.html">Iphone 12 Pro</a></li>
+				    <li><a href="iphone-12.html" title="Iphone 12">Iphone 12 </a></li>
+				    <li><a href="iphone-12-mini.html" title="Iphone 12 Mini">Iphone 12 Mini</a></li>
+			    </ul>   
+</div>
+
+<div id="main">
+        <h1>Iphone 12 family</h1>
+        <div class="owl-carousel" id="galerie">
+            <div>
+                <div class="social"></div>
+                <img src="imagini/index/apple-iphone-12-pro-max.jpg" title="Iphone 12 Pro Max" />
+            </div>
+            <div>
+                <div class="social"></div>
+                <img src="imagini/index/apple-iphone-12-pro.jpg" title="Iphone 12 Pro" />
+            </div>
+            <div>
+                <div class="social"></div>
+                <img src="imagini/index/apple-iphone-12.jpg" title="Iphone 12" />
+            </div>
+            <div>
+                <div class="social"></div>
+                <img src="imagini/index/apple-iphone-12-mini.jpg" title="Iphone 12 Mini" />
+            </div>
+        </div>
+        <h2>iPhone 12 - Unboxing, Setup and First Look</h2>
+        <div id="video-youtube">   
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/YH_DCqAmtxQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2>iPhone 12 - Main Features</h2>
+    <div id="poza">
+        <img src="imagini/index/iphone-12-review.jpg"">
+    </div>
+</div>
+
+<div id="footer">
+    <p>Powered by Tudor Software 2021</p>
+</div>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: ['<img src="imagini/index/left.png">', '<img src="imagini/index/right.png">'],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 3,
+                },
+                1000: {
+                    items: 4,
+                },
+            },
+        });
+    </script>
+
+</body>
+</html>

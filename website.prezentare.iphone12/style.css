@@ -1,0 +1,274 @@
+/* reset css */
+* {
+	box-sizing: border-box; /* include padding si border in width si height */
+}
+/* selectorul * formateaza TOATE tag-urile */
+
+body {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+} 
+
+p {
+	font-family: "Fraunces", serif;
+	text-align: justify;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+b {
+	padding-left: 10px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 0px;
+	position: relative;
+	top: 12px;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+    padding-left: 7px;
+}
+/* header */
+
+#header {
+    width: 100%; 
+    max-width: 1000px;   
+    box-sizing: border-box;
+    margin: auto;
+    background: black;
+}
+
+#header label,
+#header input {
+	display: none;
+}
+
+#header ul {
+	float: right;
+    list-style-type: none;
+    margin-top: 44px;
+    margin-left: 0;  
+}
+
+#header li {
+	float: left;
+    margin-right: 15px;
+}
+#header ul a {
+	color: #04d9ff;
+	font-size: 16px;
+}
+#header ul a:hover {
+	text-decoration: underline;
+}
+
+
+/* owl carousel */
+  #galerie .owl-next,
+        #galerie .owl-prev {
+            font-size: 58px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            outline: none;
+        }
+
+        #galerie .owl-next {
+            right: 10px;
+        }
+
+        #galerie .owl-prev {
+            left: 10px;
+        }
+        #galerie .owl-next img,
+        #galerie .owl-prev img {
+            width: 50px;
+        }
+        #galerie .social {
+            position: absolute;
+            bottom: 0;
+            height: 50px;
+            left: 0;
+            width: 100%;
+        }
+        #galerie .owl-item img {
+       transition: all .5s;
+       position: relative;
+       z-index: 1;
+        }
+
+        #galerie.owl-carousel .owl-nav.disabled {
+            display: block;
+        }
+        #galerie {
+            width: 100%;
+            margin: auto;
+            padding: 50px 80px;
+        }
+
+/* main */
+
+.gallery-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: 20px;
+}
+
+.gallery-container img {
+	width: 184px;
+	height: 104px;
+	margin-right: 20px;
+}
+
+.gallery-container a:last-of-type img {
+	margin-right: 0px;
+}
+
+#main {
+	height: auto;
+	background: white;
+	padding-bottom: 10px;
+    max-width: 1000px; 
+    margin: auto;
+}
+
+#video-youtube {
+	text-align: center;
+}
+
+#video { 
+	max-width: 600px;
+}
+
+#specificatii {
+	background-color: lightgray;
+	padding-bottom: 10px;
+	padding-top: 10px;
+   
+}
+	
+#specificatii ul {
+    margin-bottom: 10px;
+    margin-top: 0;
+    background-color: whitesmoke;
+}  
+
+#specificatii li:before {
+	content: "\203A";
+	position: relative;
+	opacity: 0.8;
+	font-size: 19px;
+	font-family: Arimo;
+}
+
+.container {
+display: flex;
+max-width: 1000px;
+margin: auto;
+width: 100%; 
+ }
+
+#poza {
+	display: flex;
+	flex-direction: column;
+	max-width: 430px;
+	margin: auto;
+}
+
+/* footer */
+#footer {
+    margin: auto;
+	padding: 10px;
+	background: royalblue;
+	color: white;
+    max-width: 1000px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width:700px) {		
+
+    #header {
+     background-image: url("imagini/index/apple-logo-700px.png");
+    }
+}    
+
+ @media screen and (max-width:600px) {		
+
+#header label {
+    display: block;
+    float: right;
+}
+
+#header label img{
+    width: 50px;
+}
+
+#header ul {
+    display: none;
+    padding-bottom: 15px; 
+ }
+
+ #header input:checked+ul {
+ display: block;
+ float: none;
+ }
+ 
+ #header li{
+ float: none;
+ padding: 15px;
+ }
+}
+
+#poza2 {
+            display: flex;
+            flex-direction: column;
+}
+
+#poza3 {
+            display: flex;
+            flex-direction: column;
+}
+
+#poza4 {           
+            display: flex;
+            flex-direction: column;
+}
+
+#video { 
+		width: 100%;
+} 
+
+#specificatii {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#specificatii ul {
+		width: 90%; 
+		display: flex;
+		flex-direction: column;
+}    
+
+#footer {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+}
